@@ -1,3 +1,15 @@
+# repository on the command line
+
+echo "# xgmao" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/m2s-project/xgmao.git
+git push -u origin main
+
+GH_TOKEN = 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
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
