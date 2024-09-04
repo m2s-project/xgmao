@@ -85,8 +85,8 @@
     "publish": {
       "provider": "github",
       "owner": "m2s-project",
-      "repo": "xgmao",
-      "private": true,
+      "repo": "xgmao.git",
+      "private": false,
       "releaseType": "release"
     },
     "nsis": {
