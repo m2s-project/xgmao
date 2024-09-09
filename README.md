@@ -8,8 +8,6 @@ git branch -M main
 git remote add origin https://github.com/m2s-project/xgmao.git
 git push -u origin main
 
-GH_TOKEN="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"
-GH_TOKEN = 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
 
 # Getting Started with Create React App
 
