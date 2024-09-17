@@ -1,0 +1,30 @@
+import { useState } from "react";
+import "./accordion.css";
+import Icon from "@mdi/react";
+import { mdiArrowDown, mdiArrowUp } from "@mdi/js";
+
+const Accordion = ({ title, content }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleAccordion = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const renderIcon = isOpen ? (
+    <Icon path={mdiArrowUp} size={0.7} color={""} />
+  ) : (
+    <Icon path={mdiArrowDown} size={0.7} color={""} />
+  );
+
+  return (
+    <div className="accordion">
+      <div className="accordion-header" onClick={toggleAccordion}>
+        {renderIcon}
+
+        <span>{title}</span>
+      </div>
+      {isOpen && <div className="accordion-content">{content}</div>}
+    </div>
+  );
+};
+
+export default Accordion;

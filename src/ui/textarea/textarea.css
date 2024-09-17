@@ -1,0 +1,12 @@
+/* TextAreaComponent.css */
+.textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    height: 100px;
+    /* Ajuster la hauteur selon les besoins */
+    resize: vertical;
+    /* Permettre le redimensionnement vertical */
+    box-sizing: border-box;
+}

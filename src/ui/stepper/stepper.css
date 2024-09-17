@@ -1,0 +1,45 @@
+.stepper {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.steps {
+    display: flex;
+}
+
+.step {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+.step.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.buttons {
+    padding: 10px;
+    text-align: center;
+}
+
+.buttons button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: #0056b3;
+}
+
+.buttons button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}

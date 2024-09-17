@@ -1,0 +1,24 @@
+.accordion {
+    border-top: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.accordion-header {
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #f8f9fa;
+}
+
+.accordion-header span {
+    /* margin: 0; */
+}
+
+.accordion-content {
+    padding: 5px 15px;
+
+    margin-left: 6px;
+}

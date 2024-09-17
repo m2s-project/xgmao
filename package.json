@@ -1,10 +1,16 @@
 {
   "name": "xgmao",
-  "version": "0.0.1",
+  "homepage": "./",
+  "version": "0.0.4",
   "description": "GMAO multiplateforme",
-  "main": "main.js",
+  "main": "public/electron.js",
   "author": "Dev Team",
+  "license": "MIT",
   "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/m2s-project/xgmao.git"
+  },
   "dependencies": {
     "@mdi/js": "^7.4.47",
     "@mdi/react": "^1.6.1",
@@ -14,6 +20,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "apexcharts": "^3.53.0",
+    "axios": "^1.7.7",
     "electron-log": "^5.1.7",
     "electron-updater": "^6.3.4",
     "i18next": "^23.14.0",
@@ -35,7 +42,9 @@
     "eject": "react-scripts eject",
     "electron": "electron .",
     "dev": "concurrently \"npm start\" \"npm run electron\"",
-    "dist": "electron-builder"
+    "dist": "electron-builder",
+    "make-cert": "electron-builder create-self-signed-cert -p xgmao",
+    "deploy": "electron-builder build -w -p onTagOrDraft"
   },
   "eslintConfig": {
     "extends": [
@@ -72,10 +81,16 @@
       "buildResources": "assets"
     },
     "win": {
+      "publish": [
+        "github"
+      ],
       "target": [
         "nsis"
       ],
-      "icon": "assets/icon.ico"
+      "icon": "assets/icon.ico",
+      "certificateFile": "private/xgmao.pfx",
+      "verifyUpdateCodeSignature": false,
+      "publisherName": "xgmao"
     },
     "mac": {
       "target": [
@@ -92,9 +107,9 @@
     "publish": {
       "provider": "github",
       "owner": "m2s-project",
-      "repo": "xgmao.git",
+      "repo": "xgmao",
       "private": false,
-      "releaseType": "release"
+      "releaseType": "draft"
     },
     "nsis": {
       "oneClick": false,

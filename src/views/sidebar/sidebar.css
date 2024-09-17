@@ -1,0 +1,25 @@
+.sidebar{
+    position: inherit;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    background-color: transparent;
+}
+
+.sidebar-items{
+    padding: 2px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.sidebar-items:hover{
+border-radius: var(--border-radius);
+padding: 2px;
+    background-color: #ccc;
+}
+
+.active{
+    background-color: #ccc;
+    border-left: 2px solid var(--main-color);
+    border-radius: var(--border-radius);
+}
