@@ -2,7 +2,7 @@
     position: inherit;
     display: flex;
     flex-direction: column;
-    padding: 5px;
+    padding: var(--padding);
     background-color: transparent;
 }
 

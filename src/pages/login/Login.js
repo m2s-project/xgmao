@@ -37,7 +37,7 @@ const Login = () => {
             autoComplete="email"
             required
           />
-          <label htmlFor={"email"}>Adresse e-mail ou identifiant</label>
+          <label htmlFor={"email"}>Adresse e-mail</label>
         </div>
         <div className="input-label-box  ">
           <input
@@ -49,10 +49,11 @@ const Login = () => {
           />
           <label htmlFor={"password"}>Mot de passe</label>
         </div>
-
-        <button className="button" type="submit">
+    <div className="login-button">
+        <button  type="submit">
           Se connecter
         </button>
+        </div>
       </form>
       {status === "loading" && <p>Chargement...</p>}
       {error && <p>{error}</p>}

@@ -12,13 +12,15 @@
     /* --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
 
 
+    --padding:5px;
     --font-size: 15px;
 
 
     --button-bg: #0000ff;
     --button-hover: #ccc;
 
-    --header-height: 30px
+    --header-height: 30px;
+
 }
 
 * {

@@ -1,7 +1,7 @@
 .ressources {
     position: relative;
     width: 100%;
-    padding: 5px;
+    padding: var(--padding);
     border: var(--border);
 }
 

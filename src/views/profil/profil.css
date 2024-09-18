@@ -27,7 +27,7 @@
     right: 0;
     width: max-content;
     max-width: 400px;
-    padding: 5px;
+    padding: var(--padding);
     border: var(--border);
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
@@ -42,7 +42,7 @@
     background-color: var(--main-color);
     border-radius: var(--border-radius);
     border: none;
-    padding: 5px;
+    padding: var(--padding);
 }
 
 .profil-content button:hover {

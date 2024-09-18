@@ -11,11 +11,11 @@
 
 .header-start {
     margin-left: 5px;
-    padding: 5px;
+    padding: var(--padding);
 }
 
 
 .header-end {
     margin-right: 5px;
-    padding: 5px;
+    padding: var(--padding);
 }
