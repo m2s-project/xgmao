@@ -13,7 +13,6 @@ const Carousel = ({ images }) => {
 
   return (
     <div className="carousel">
-      {" "}
       <img
         src={images[currentIndex]}
         alt={`Slide $ {
@@ -22,13 +21,13 @@ const Carousel = ({ images }) => {
 
             `}
         className="carousel-image"
-      />{" "}
+      />
       <button onClick={prevSlide} className="carousel-prev">
-        &#10094;{" "}
-      </button>{" "}
+        &#10094;
+      </button>
       <button onClick={nextSlide} className="carousel-next">
-        &#10095;{" "}
-      </button>{" "}
+        &#10095;
+      </button>
     </div>
   );
 };

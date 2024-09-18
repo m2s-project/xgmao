@@ -1,4 +1,6 @@
 import React from "react";
+import './textarea.css'
+
 
 const TextArea = ({ placeholder, value, onChange }) => {
   return (

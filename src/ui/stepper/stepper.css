@@ -1,6 +1,6 @@
 .stepper {
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: var(--border);
+    border-radius: var(--border-radius);
     overflow: hidden;
 }
 
@@ -10,13 +10,13 @@
 
 .step {
     flex: 1;
-    padding: 10px;
+    padding: 5px;
     text-align: center;
     background-color: #f8f9fa;
 }
 
 .step.active {
-    background-color: #007bff;
+    background-color: var(--main-color);
     color: #fff;
 }
 
@@ -27,19 +27,19 @@
 
 .buttons button {
     margin: 0 5px;
-    padding: 5px 10px;
-    background-color: #007bff;
+    padding: 5px ;
+    background-color: var(--main-color);
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     cursor: pointer;
 }
 
 .buttons button:hover {
-    background-color: #0056b3;
+    background-color: var(--grey-color);
 }
 
 .buttons button:disabled {
-    background-color: #ccc;
+    background-color: var(--grey-color);
     cursor: not-allowed;
 }

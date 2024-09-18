@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "./toast.css"
+import "./toast.css";
 
 const Toast = ({ message, duration, onClose }) => {
   useEffect(() => {
@@ -10,8 +10,7 @@ const Toast = ({ message, duration, onClose }) => {
   }, [duration, onClose]);
   return (
     <div className="toast">
-      {" "}
-      <div className="toast-content">{message}</div>{" "}
+      <div className="toast-content">{message}</div>
     </div>
   );
 };

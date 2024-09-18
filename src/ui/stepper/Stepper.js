@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import "./stepper.css"
 const Stepper = ({ steps }) => {
   const [currentStep, setCurrentStep] = useState(0);
   const handleNext = () => {
@@ -14,31 +14,27 @@ const Stepper = ({ steps }) => {
   };
   return (
     <div className="stepper">
-      {" "}
       <div className="steps">
-        {" "}
         {steps.map((step, index) => (
           <div
             key={index}
             className={`step ${currentStep === index ? "active" : ""}`}
           >
-            {" "}
-            {step}{" "}
+            {step}
           </div>
-        ))}{" "}
-      </div>{" "}
+        ))}
+      </div>
       <div className="buttons">
-        {" "}
         <button onClick={handlePrev} disabled={currentStep === 0}>
           Précédent
-        </button>{" "}
+        </button>
         <button
           onClick={handleNext}
           disabled={currentStep === steps.length - 1}
         >
           Suivant
-        </button>{" "}
-      </div>{" "}
+        </button>
+      </div>
     </div>
   );
 };

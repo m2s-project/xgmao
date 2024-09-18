@@ -1,15 +1,21 @@
-.header{
-position: absolute;
-display: flex;
-justify-content: space-between;
-align-items: center;
-width: 100%;
-height: var(--header-height);
-background-color: transparent;
-box-shadow: var(--box-shadow);
+.header {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: var(--header-height);
+    background-color: transparent;
+    box-shadow: var(--box-shadow);
 }
 
-.header-start{
+.header-start {
     margin-left: 5px;
+    padding: 5px;
+}
+
+
+.header-end {
+    margin-right: 5px;
     padding: 5px;
 }

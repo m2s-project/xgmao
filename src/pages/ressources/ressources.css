@@ -1,0 +1,12 @@
+.ressources {
+    position: relative;
+    width: 100%;
+    padding: 5px;
+    border: var(--border);
+}
+
+.ressources div {
+    padding-inline: 5px;
+    background-color: var(--grey-color);
+    margin-bottom: 5px;
+}

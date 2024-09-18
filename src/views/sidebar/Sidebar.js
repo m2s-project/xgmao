@@ -9,7 +9,7 @@ const Sidebar = () => {
     <div className="sidebar">
       
       {modulesList.map((item, index) => (
-        <NavLink to={`/home/${item.route}`} className="sidebar-items">
+        <NavLink key={index} to={`/home/${item.route}`} className="sidebar-items">
         <Icon path={item.icon} size={1.2} color={"blue"} title={item.name}/>
         </NavLink>
       ))}

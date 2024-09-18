@@ -11,7 +11,7 @@
     display: inline-block;
     width: 60px;
     height: 30px;
-    background-color: #ccc;
+    background-color: var(--grey-color);
     border-radius: 15px;
     position: relative;
     cursor: pointer;

@@ -1,5 +1,5 @@
 */ .tabs {
-    border: 1px solid #ccc;
+    border:var(--border);
     border-radius: 5px;
     overflow: hidden;
 }
@@ -10,16 +10,16 @@
 
 .tab {
     flex: 1;
-    padding: 10px;
+    padding: 5px;
     text-align: center;
     cursor: pointer;
 }
 
 .tab.active {
-    background-color: #007bff;
+    background-color: var(--main-color);
     color: #fff;
 }
 
 .tab-content {
-    padding: 20px;
+    padding: 5px;
 }

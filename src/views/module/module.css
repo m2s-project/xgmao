@@ -42,8 +42,10 @@
     font-weight: 200;
 }
 
-.module-filter:hover .module-btn {
+.module-filter:hover .module-btn:hover{
     opacity: 1;
+    color: var(--main-color);
+    font-weight: 400;
 }
 
 .module-title {}

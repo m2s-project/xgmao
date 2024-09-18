@@ -3,7 +3,15 @@ import Layout from "../layouts/Layout";
 import Home from "../pages/home/Home";
 import Login from "../pages/login/Login";
 import Protect from "./Protect";
-import Dashboard from "../pages/dashboard/Dashboard";
+
+import { Achats } from "../pages/achats";
+import { Dashboard } from "../pages/dashboard";
+import { Stocks } from "../pages/stocks";
+import { Interventions } from "../pages/interventions";
+import { Inspections } from "../pages/inspections";
+import { Maintenances } from "../pages/maintenances";
+import { Ressources } from "../pages/ressources";
+import { Settings } from "../pages/settings";
 
 export const router = createHashRouter([
   {
@@ -26,50 +34,42 @@ export const router = createHashRouter([
       // Tableau de bord
       {
         path: "home/dashboard",
-        element:  <Dashboard />
-        ,
+        element: <Dashboard />,
       },
       // Achats
       {
         path: "home/achats",
-        element:  <Dashboard />
-        ,
+        element: <Achats />,
       },
       // Stocks
       {
         path: "home/stocks",
-        element:  <Dashboard />
-        ,
+        element: <Stocks />,
       },
       // Interventions
       {
         path: "home/interventions",
-        element:  <Dashboard />
-        ,
+        element: <Interventions />,
       },
       // Inspections
       {
         path: "home/inspections",
-        element:  <Dashboard />
-        ,
+        element: <Inspections />,
       },
       // Maintenances
       {
         path: "home/maintenances",
-        element:  <Dashboard />
-        ,
+        element: <Maintenances />,
       },
       // RH
       {
         path: "home/ressources",
-        element:  <Dashboard />
-        ,
+        element: <Ressources />,
       },
       // Paramètres
       {
         path: "home/settings",
-        element:  <Dashboard />
-        ,
+        element: <Settings />,
       },
     ],
   },
