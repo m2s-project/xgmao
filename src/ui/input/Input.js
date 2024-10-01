@@ -1,10 +1,10 @@
 import "./input.css";
 
-const Input = ({ type, label, value, onChange }) => {
+const Input = (props) => {
   return (
-    <div className="form-input">
-      <label>{label}</label>
-      <input type={type} value={value} onChange={onChange} />
+    <div className={`form-input col-${props.col?props.col:null}`}>
+      <label>{props.label}</label>
+      <input {...props}  />
     </div>
   );
 };

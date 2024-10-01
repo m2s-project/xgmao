@@ -1,80 +1,70 @@
-# Description
+# Getting Started with Create React App
 
-Le projet eXpert de Gestion de Maintenance Assistée par Ordinateur (XGMAO) vise à développer une solution multiplateforme 
-pour améliorer l'efficacité de la maintenance, réduire les temps d'arrêt et optimiser les coûts opérationnels. 
-Ce projet est destiné à être utilisé par divers clients.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-# Fonctionnalités
+## Available Scripts
 
-# Gestion des Équipements
-•	Suivi du cycle de vie des équipements
-•	Gestion des pièces détachées et des contrats de maintenance
-•	Suivi des coûts et des alertes pour les entretiens planifiés
-•	Arborescence hiérarchique des actifs
+In the project directory, you can run:
 
-# Gestion des Inspections
-•	Création de plans d'inspection et calendrier interactif
-•	Alertes et notifications automatiques
-•	Ordres de travail automatiques et création de maintenances préventives ou urgentes
-•	Suivi en temps réel et validation des inspections
+### `npm start`
 
-# Gestion des Interventions
-•	Création et suivi des interventions d'urgence
-•	Historique des interventions et calendrier interactif
-•	Évaluation des interventions et gestion des ressources
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-# Gestion des Stocks et Achats
-•	Suivi des mouvements de stock et gestion des fournisseurs
-•	Réapprovisionnement automatisé et inventaire périodique
-•	Suivi des livraisons et gestion des contrats d'achat
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-# Gestion des Stratégies de Maintenance
-•	Maintenance prédictive et analyse des causes de pannes
-•	Tableaux de bord personnalisés et gestion des procédures
+### `npm test`
 
-# Gestion des Contrats de Maintenance Externe
-•	Suivi des prestataires externes 
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-# Notifications et Rappels
-•	Notifications multi-canal et rappels automatisés
+### `npm run build`
 
-# Mobilité et Accès à Distance
-•	Application mobile complète avec accès hors-ligne
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-# Installation
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-# Prérequis
-•	Node.js
-•	Npm pnpm ou yarn
-•	Electron (pour la version desktop)
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-# Cloner le dépôt
+### `npm run eject`
 
-## terminal
-`git clone http://gitlab.itechcenter.ne:8224/gmao/frontend.git`
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-# Installer les dépendances
-``npm, pnpm ou yarn install``
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-# Démarrer l'application
-Pour démarrer la version web :
-## terminal
-``npm, pnpm ou yarn start``
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-Pour démarrer la version desktop (Electron) :
-## terminal
-``npm, pnpm ou yarn dev``
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-# Développement
+## Learn More
 
-# Structure du Projet
-Voir le clone Gitlab
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-# Build
-Pour créer une version de production de l'application web :
-## terminal
-``npm, pnpm ou yarn build``
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-Pour empaqueter l'application Electron :
-## terminal
-``npm, pnpm ou yarn dist``
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

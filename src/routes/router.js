@@ -6,12 +6,17 @@ import Protect from "./Protect";
 
 import { Achats } from "../pages/achats";
 import { Dashboard } from "../pages/dashboard";
-import { Stocks } from "../pages/stocks";
+import { ArticleForm, ArticleList, Stocks } from "../pages/stocks";
 import { Interventions } from "../pages/interventions";
 import { Inspections } from "../pages/inspections";
 import { Maintenances } from "../pages/maintenances";
 import { Ressources } from "../pages/ressources";
 import { Settings } from "../pages/settings";
+import Reappro from "../pages/reappro/Reappro";
+import EmployeList from "../pages/ressources/employes/EmployeList";
+import EmployeForm from "../pages/ressources/employes/EmployeForm";
+import UtilisateurList from "../pages/ressources/employes/utilisateur/UtilisateurList";
+import UtilisateurForm from "../pages/ressources/employes/utilisateur/UtilisateurForm";
 
 export const router = createHashRouter([
   {
@@ -41,9 +46,45 @@ export const router = createHashRouter([
         path: "home/achats",
         element: <Achats />,
       },
+      {
+        path: "home/achats/*",
+        element: <Achats />,
+      },
+      // Reappro
+      {
+        path: "home/reappro",
+        element: <Reappro />,
+      },
+      {
+        path: "home/reappro/*",
+        element: <Reappro />,
+      },
       // Stocks
       {
         path: "home/stocks",
+        element: <Stocks />,
+      },
+
+      {
+        path: "home/stocks/*",
+        element: <Stocks />,
+      },
+      // Articles
+      {
+        path: "home/stocks/articles",
+        element: <ArticleList />,
+      },
+      {
+        path: "home/stocks/articles/add",
+        element: <ArticleForm />,
+      },
+      // Mouvements
+      {
+        path: "home/stocks/mouvements",
+        element: <Stocks />,
+      },
+      {
+        path: "home/stocks/mouvements/*",
         element: <Stocks />,
       },
       // Interventions
@@ -64,6 +105,26 @@ export const router = createHashRouter([
       // RH
       {
         path: "home/ressources",
+        element: <Ressources />,
+      },
+      {
+        path: "home/ressources/employes",
+        element: <EmployeList />,
+      },
+      {
+        path: "home/ressources/employes/add",
+        element: <EmployeForm />,
+      },
+      {
+        path: "home/ressources/employes/utilisateurs",
+        element: <UtilisateurList />,
+      },
+      {
+        path: "home/ressources/employes/utilisateurs/add",
+        element: <UtilisateurForm />,
+      },
+      {
+        path: "home/ressources/*",
         element: <Ressources />,
       },
       // Paramètres

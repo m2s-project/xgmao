@@ -1,30 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
-// import { useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-// import { login } from "../../redux/authSlice";
+import { loginUser } from "../../redux/authSlice";
 import logo from "../../assets/logo.png";
 import "./login.css";
 
 const Login = () => {
-  // const dispatch = useDispatch();
-  const { token, status, error } = useSelector((state) => state.auth);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const dispatch = useDispatch();
+  const { status, error } = useSelector((state) => state.auth);
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const data = new FormData(e.target);
-    let user = Object.fromEntries(data);
-    console.log(user);
-    // dispatch(login(user));
-    navigate("/home", { replace: true });
+   
+    dispatch(loginUser({ email, password }));
+    // navigate("/home", { replace: true });
   };
-  if (token) {
+  if (status === "succeeded") {
     return <Navigate to="/home" />;
   }
 
   return (
     <div className=" login">
+      {status === "loading" && <p>authentification...</p>}
+      {error && <p>Erreur d'authentification</p>}
       <img src={logo} alt="logo" width={50} />
 
       <form onSubmit={handleSubmit}>
@@ -33,7 +35,8 @@ const Login = () => {
             id="email"
             type="email"
             name="email"
-            defaultValue={""}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             autoComplete="email"
             required
           />
@@ -44,19 +47,16 @@ const Login = () => {
             id="password"
             type="password"
             name="password"
-            defaultValue={""}
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
             required
           />
           <label htmlFor={"password"}>Mot de passe</label>
         </div>
-    <div className="login-button">
-        <button  type="submit">
-          Se connecter
-        </button>
+        <div className="login-button">
+          <button type="submit">Se connecter</button>
         </div>
       </form>
-      {status === "loading" && <p>Chargement...</p>}
-      {error && <p>{error}</p>}
     </div>
   );
 };

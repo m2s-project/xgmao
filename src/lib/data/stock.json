@@ -1,0 +1,22 @@
+{
+    "stock_item_id": "STK12345",
+    "name": "Filtre à air",
+    "category": "Pièces de rechange",
+    "description": "Filtre à air pour moteur diesel modèle X200.",
+    "quantity_in_stock": 50,
+    "minimum_quantity": 10,
+    "maximum_quantity": 100,
+    "reorder_level": 15,
+    "supplier": {
+      "supplier_id": "SUP7890",
+      "name": "ABC Fournisseurs"
+    },
+    "unit_price": 20.5,
+    "location": "Entrepôt A - Rangée 3",
+    "last_restock_date": "2024-09-10T08:00:00",
+    "next_restock_date": null,
+    "expiration_date": "2025-12-31T00:00:00",
+    "status": "Disponible",
+    "last_update": "2024-09-15T12:00:00"
+  }
+  

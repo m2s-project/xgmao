@@ -1,14 +1,17 @@
 import React from "react";
-
-const Select = ({ options, value, onChange }) => {
+import './select.css'
+const Select = (props) => {
   return (
-    <select value={value} onChange={onChange} className="select">
-      {options.map((option) => (
+    <div className={`select col-${props.col?props.col:null}`}>
+        <label>{props.label}</label>
+    <select {...props}  className="select"  >
+      {props.options.map((option) => (
         <option key={option.value} value={option.value}>
           {option.label}
         </option>
       ))}
     </select>
+    </div>
   );
 };
 

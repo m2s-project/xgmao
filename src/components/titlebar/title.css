@@ -1,0 +1,18 @@
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: var(--border);
+ 
+    padding: 5px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    padding-right: 15px
+}
+
+.title .title-icon{
+
+margin-right: 3px;
+cursor: pointer;
+
+}

@@ -1,45 +1,68 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
+import { auth } from '../api/firebaseConfig';
+import { signInWithEmailAndPassword, signOut, onAuthStateChanged } from 'firebase/auth';
 
-// Action asynchrone pour l'authentification
-export const login = createAsyncThunk('auth/login', async (credentials) => {
-    const response = await axios.post('http://localhost:5000/api/login', credentials);
-    return response.data;
-  });
-  
-  const authSlice = createSlice({
-    name: 'auth',
-    initialState: {
-      user: null,
-      token: null,
-      status: 'idle',
-      error: null,
+
+export const loginUser = createAsyncThunk(
+  'auth/loginUser',
+  async ({ email, password }, { rejectWithValue }) => {
+    try {
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      return userCredential.user;
+    } catch (error) {
+      return rejectWithValue(error.message);
+    }
+  }
+);
+
+
+export const logoutUser = createAsyncThunk('auth/logoutUser', async () => {
+  await signOut(auth);
+});
+
+
+const authSlice = createSlice({
+  name: 'auth',
+  initialState: {
+    user: null,
+    status: 'idle',
+    error: null,
+  },
+  reducers: {
+    setUser: (state, action) => {
+      state.user = action.payload;
     },
-    reducers: {
-      logout: (state) => {
-        state.token = null;
+  },
+  extraReducers: (builder) => {
+    builder
+      .addCase(loginUser.pending, (state) => {
+        state.status = 'loading';
+      })
+      .addCase(loginUser.fulfilled, (state, action) => {
+        state.status = 'succeeded';
+        state.user = action.payload;
+      })
+      .addCase(loginUser.rejected, (state, action) => {
+        state.status = 'failed';
+        state.error = action.payload;
+      })
+      .addCase(logoutUser.fulfilled, (state) => {
+        state.status= 'idle'
         state.user = null;
-        localStorage.removeItem('token');
-      },
-    },
-    extraReducers: (builder) => {
-      builder
-        .addCase(login.pending, (state) => {
-          state.status = 'loading';
-        })
-        .addCase(login.fulfilled, (state, action) => {
-          state.status = 'succeeded';
-          state.token = action.payload.token;
-          state.user = action.payload.user;
-          localStorage.setItem('token', action.payload.token);
-        })
-        .addCase(login.rejected, (state, action) => {
-          state.status = 'failed';
-          state.error = action.error.message;
-        });
-    },
+      });
+  },
+});
+
+export const { setUser } = authSlice.actions;
+export default authSlice.reducer;
+
+// Listen for auth state changes and update Redux state
+export const listenForAuthChanges = () => (dispatch) => {
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      dispatch(setUser(user));
+    } else {
+      dispatch(setUser(null));
+    }
   });
-  
-  export const { logout } = authSlice.actions;
-  export default authSlice.reducer;
-  
+};

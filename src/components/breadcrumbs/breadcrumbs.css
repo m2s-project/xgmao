@@ -1,0 +1,12 @@
+.breadcrumbs .item {
+
+  text-transform: capitalize;
+}
+
+.breadcrumbs .item:hover {
+  color: var(--main-color);
+}
+
+.breadcrumbs .separator {
+  padding-inline: 2px;
+}

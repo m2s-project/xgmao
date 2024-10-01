@@ -1,9 +1,30 @@
 .sidebar{
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+}
+.sidebar-left{
     position: inherit;
     display: flex;
     flex-direction: column;
     padding: var(--padding);
     background-color: transparent;
+   
+}
+.sidebar-right{
+    
+    display: none;
+    position: inherit;
+    flex-direction: column;
+    padding: var(--padding);
+    background-color: transparent;
+   border-left: var(--border);
+    
+}
+.sidebar-right .navbar{
+    
+    display: flex;
+    width: var(--navbar-width);
 }
 
 .sidebar-items{

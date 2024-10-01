@@ -3,8 +3,8 @@ import "./profil.css";
 import Icon from "@mdi/react";
 import { mdiAccount } from "@mdi/js";
 import { useNavigate } from "react-router-dom";
-// import { useDispatch } from "react-redux";
-// import { logout } from "../../redux/authSlice";
+import { useDispatch } from "react-redux";
+import { logoutUser } from "../../redux/authSlice";
 const clickOut = (content, toggle) => {
   document.addEventListener("mousedown", (e) => {
     if (toggle.current && toggle.current.contains(e.target)) {
@@ -15,10 +15,10 @@ const clickOut = (content, toggle) => {
       }
     }
   });
-};
+}
 
 const Profil = () => {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const content = useRef(null);
   const toggle = useRef(null);
@@ -26,8 +26,8 @@ const Profil = () => {
   clickOut(content, toggle);
   const handleLogOut = (e) => {
     e.preventDefault();
-    // dispatch(logout())
-    navigate(navigate("/", { replace: true }));
+    dispatch(logoutUser())
+    // navigate("/", { replace: true });
   };
   return (
     <div className="profil">

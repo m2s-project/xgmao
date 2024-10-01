@@ -1,17 +1,16 @@
 import React from "react";
 import "./radiobutton.css";
 
-const RadioButton = ({ label, value, checked, onChange }) => {
+const RadioButton = (props) => {
   return (
     <label className="radio-label">
       <input
+      {...props}
         type="radio"
-        value={value}
-        checked={checked}
-        onChange={onChange}
+       
         className="radio-input"
       />
-      <span className="radio-custom"></span> {label}
+      <span className="radio-custom"></span> {props.label}
     </label>
   );
 };

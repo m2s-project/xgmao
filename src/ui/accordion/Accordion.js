@@ -3,8 +3,8 @@ import "./accordion.css";
 import Icon from "@mdi/react";
 import { mdiArrowDown, mdiArrowUp } from "@mdi/js";
 
-const Accordion = ({ title, content }) => {
-  const [isOpen, setIsOpen] = useState(false);
+const Accordion = ({ title, content, open }) => {
+  const [isOpen, setIsOpen] = useState(open?open:false);
   const toggleAccordion = () => {
     setIsOpen(!isOpen);
   };
@@ -18,7 +18,7 @@ const Accordion = ({ title, content }) => {
   return (
     <div className="accordion">
       <div className="accordion-header" onClick={toggleAccordion}>
-        {renderIcon}
+        {/* {renderIcon} */}
 
         <span>{title}</span>
       </div>

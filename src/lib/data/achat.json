@@ -1,0 +1,42 @@
+{
+    "purchase_id": "PUR45678",
+    "supplier": {
+      "supplier_id": "SUP7890",
+      "name": "ABC Fournisseurs",
+      "contact": "Jean Fournier",
+      "phone": "+33 1 23 45 67 89",
+      "email": "contact@abc-fournisseurs.com"
+    },
+    "items": [
+      {
+        "stock_item_id": "STK12345",
+        "name": "Filtre à air",
+        "quantity": 50,
+        "unit_price": 20.5,
+        "total_price": 1025
+      },
+      {
+        "stock_item_id": "STK54321",
+        "name": "Huile moteur",
+        "quantity": 20,
+        "unit_price": 15,
+        "total_price": 300
+      }
+    ],
+    "total_cost": 1325,
+    "order_date": "2024-09-01T10:00:00",
+    "expected_delivery_date": "2024-09-05T12:00:00",
+    "actual_delivery_date": "2024-09-05T11:30:00",
+    "status": "Livrée",
+    "payment_status": "Payé",
+    "invoice_number": "INV987654",
+    "purchase_order_number": "PO20240901",
+    "documents": [
+      {
+        "doc_id": "DOC001",
+        "name": "Facture d'achat",
+        "url": "https://docs.company.com/invoice_987654"
+      }
+    ]
+  }
+  

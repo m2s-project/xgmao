@@ -91,7 +91,8 @@
     border-radius: var(--border-radius);
     /* border: none; */
     box-shadow: var(--box-shadow);
-    font-size: var(--font-size)
+    font-size: var(--font-size);
+    color: var(--gre-color);
  
 }
 

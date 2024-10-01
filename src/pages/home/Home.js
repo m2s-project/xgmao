@@ -6,12 +6,7 @@ const Home = () => {
     <div className="home">
       <div className="home-list">
         {modulesList.map((module, index) => (
-          <Module
-            key={index}
-            icon={module.icon}
-            name={module.name}
-            route={module.route}
-          />
+          <Module key={index} module={module} />
         ))}
       </div>
     </div>

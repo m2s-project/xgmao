@@ -5,8 +5,13 @@
     border: var(--border);
 }
 
-.interventions div {
-    padding-inline: 5px;
-    background-color: var(--grey-color);
+.interventions .title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: var(--border);
+ 
+    padding: 5px;
+    box-sizing: border-box;
     margin-bottom: 5px;
 }

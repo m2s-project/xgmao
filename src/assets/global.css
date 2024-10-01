@@ -20,6 +20,7 @@
     --button-hover: #ccc;
 
     --header-height: 30px;
+    --navbar-width : 160px
 
 }
 
@@ -43,4 +44,8 @@ body {
 a {
     text-decoration: none;
     color: unset;
+}
+
+form{
+    font-weight: 400;
 }

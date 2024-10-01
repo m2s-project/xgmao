@@ -1,0 +1,48 @@
+{
+    "intervention_id": "INT12345",
+    "name": "Réparation du moteur",
+    "description": "Réparation d'urgence du moteur principal suite à une panne.",
+    "equipment_id": "EQP67890",
+    "type": "Corrective",
+    "technicians": [
+      {
+        "id": "TECH001",
+        "name": "Jean Dupont"
+      },
+      {
+        "id": "TECH002",
+        "name": "Marie Leroy"
+      }
+    ],
+    "priority": "Critique",
+    "status": "En cours",
+    "date_created": "2024-09-15T08:30:00",
+    "start_date": "2024-09-15T09:00:00",
+    "end_date_estimated": "2024-09-15T14:00:00",
+    "actual_end_date": null,
+    "duration": null,
+    "spare_parts_used": [
+      {
+        "part_id": "PART123",
+        "name": "Courroie de transmission",
+        "quantity": 1
+      }
+    ],
+    "cost": {
+      "labor": 500,
+      "parts": 100,
+      "total": 600
+    },
+    "documents": [
+      {
+        "doc_id": "DOC456",
+        "name": "Manuel de réparation",
+        "url": "https://docs.company.com/reparation_moteur"
+      }
+    ],
+    "technician_comments": "Moteur endommagé par une surchauffe. Nécessite remplacement de courroie.",
+    "risk_level": "Élevé",
+    "special_conditions": "Utiliser des gants de protection en raison des hautes températures.",
+    "supervisor_approval": false
+  }
+  

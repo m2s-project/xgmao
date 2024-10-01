@@ -1,19 +1,32 @@
 .form-input {
-    margin-bottom: 20px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 10px;
 }
 
-label {
+.form-input label {
     display: block;
-    margin-bottom: 5px;
+    padding: var(--padding);
+    text-transform: capitalize;
+   
+    min-width: max-content;
 }
 
-input {
+.form-input input {
     width: 100%;
-    padding: 5px;
-    border: var(--border);
-    border-radius: 5px;
+    
+    padding: var(--padding);
+    border: none;
+    border-bottom: var(--border);
+
 }
 
-input:focus {
-    outline-color: var(--grey-color);
+.form-input input:focus {
+background-color:var(--grey-color);
+outline-style: none;
+border-bottom: 2px solid var(--main-color);
+border-top-left-radius: var(--border-radius);
+border-top-right-radius: var(--border-radius);
+
 }

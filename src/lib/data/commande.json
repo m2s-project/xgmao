@@ -1,0 +1,39 @@
+{
+    "order_id": "ORD23456",
+    "customer": {
+      "customer_id": "CUST98765",
+      "name": "Entreprise XYZ",
+      "contact": "Claire Dupont",
+      "phone": "+33 2 98 76 54 32",
+      "email": "claire.dupont@xyz.com"
+    },
+    "items": [
+      {
+        "stock_item_id": "STK12345",
+        "name": "Filtre à air",
+        "quantity": 10,
+        "unit_price": 25,
+        "total_price": 250
+      }
+    ],
+    "order_date": "2024-09-07T15:00:00",
+    "delivery_date": "2024-09-09T10:00:00",
+    "status": "Livrée",
+    "payment_status": "En attente de paiement",
+    "shipping_method": "Colissimo",
+    "tracking_number": "COL123456789FR",
+    "delivery_address": {
+      "street": "12 Rue de l'Industrie",
+      "city": "Paris",
+      "postal_code": "75001",
+      "country": "France"
+    },
+    "documents": [
+      {
+        "doc_id": "DOC002",
+        "name": "Bon de livraison",
+        "url": "https://docs.company.com/delivery_note_ORD23456"
+      }
+    ]
+  }
+  

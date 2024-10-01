@@ -1,7 +1,8 @@
 .accordion {
-    border-top: 1px solid #ccc;
-    border-radius: 5px;
+
+    /* border-radius: 5px; */
     margin-bottom: 5px;
+    border-bottom: var(--border) ;
 }
 
 .accordion-header {
@@ -10,7 +11,10 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    border-bottom: var(--border) ;
     background-color: #f8f9fa;
+    color: var(--main-color);
+    font-weight: 400;
 }
 
 .accordion-header span {
@@ -18,7 +22,5 @@
 }
 
 .accordion-content {
-    padding: 5px 15px;
-
-    margin-left: 6px;
+padding: 5px;
 }

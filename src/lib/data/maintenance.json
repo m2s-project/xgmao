@@ -1,0 +1,53 @@
+{
+    "maintenance_id": "MAINT78901",
+    "type": "Préventive",
+    "name": "Entretien régulier des roulements",
+    "equipment_id": "EQP67890",
+    "date_created": "2024-09-01T08:00:00",
+    "frequency": "Mensuelle",
+    "status": "Planifiée",
+    "technicians": [
+      {
+        "id": "TECH004",
+        "name": "Marc Dubois"
+      }
+    ],
+    "estimated_cost": {
+      "labor": 300,
+      "parts": 150,
+      "total": 450
+    },
+    "actual_cost": null,
+    "spare_parts_used": [
+      {
+        "part_id": "PART678",
+        "name": "Roulement à billes",
+        "quantity": 4
+      }
+    ],
+    "estimated_duration": "3 heures",
+    "actual_duration": null,
+    "maintenance_report": null,
+    "next_maintenance_date": "2024-10-01T08:00:00",
+    "risk_analysis": "Faible risque, nécessite simplement des précautions standards.",
+    "maintenance_history": [
+      {
+        "maintenance_id": "MAINT56789",
+        "date": "2024-08-01T08:00:00",
+        "technicians": [
+          {
+            "id": "TECH004",
+            "name": "Marc Dubois"
+          }
+        ],
+        "result": "Aucun problème détecté."
+      }
+    ],
+    "instructions": "Lubrification des roulements et vérification de l'usure.",
+    "kpi_tracking": {
+      "MTTR": "2 heures",
+      "MTBF": "1000 heures"
+    },
+    "supervisor_approval": false
+  }
+  
